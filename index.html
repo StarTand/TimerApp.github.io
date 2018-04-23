@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <title>VTimer</title>
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/vue"></script> -->
+    <div id="timerApp" class="container">
+      <h1>VTimer</h1>
+      <ul class="timer_list">
+        <!-- add timer -->
+        <li class="timer">
+          <input type="button" id="add_button" @click="openWriteTimer" value="+" class="add_button">
+          <div id="add_timer">
+            <input type="button" id="write_button" @click="addTimer" value="Add" class="write_button">
+            <div class="title">
+              <input type="text" id="add_title" placeholder="title">
+            </div>
+
+            <div class="time">
+              <!-- <input type="text" id="add_datetime"> -->
+              <input type="time" id="add_time" list="timeDatelist">
+              <datalist id="timeDatelist"></datalist>
+              <input type="date" id="add_date">
+            </div>
+            <div class="delete">
+              <input type="button" @click="closeWriteTimer" value="×" class="delete_button">
+            </div>
+          </div>
+        </li>
+        <!-- timer list -->
+        <li v-for="(timer, index) in timerList" class="timer">
+          <div class="title">
+            {{ timer.title }}
+          </div>
+
+          <div class="time">
+            {{ timer.timeRemaining }}
+          </div>
+
+          <div class="delete">
+            <div class="delete_index">{{ index }}</div>
+            <input type="button" @click="deleteTimer($event)" value="×" class="delete_button">
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="#modal-main">
+      <div class="modal_title"></div>
+      <div class="modal_content"></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

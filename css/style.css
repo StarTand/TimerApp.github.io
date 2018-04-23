@@ -1,0 +1,133 @@
+body {
+  font-size: 16px;
+  font-family: Verdana, sans-serif;
+}
+
+.container {
+  width: 300px;
+  margin: auto;
+}
+
+#timerApp h1 {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 0;
+}
+
+#timerApp .add_button {
+  display: inline-block;
+  text-decoration: none;
+  background: #323232;
+  color: #FFF;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 0px;
+  border-radius: 50%;
+  text-align: left;
+  vertical-align: text-bottom;;
+  overflow: hidden;
+  transition: .4s;
+}
+#timerApp .add_button:hover{
+    background: #121212;
+}
+#timerApp #add_timer {
+  display: none;
+}
+#timerApp #add_timer #write_button {
+  display: inline-block;
+  text-decoration: none;
+  background: #323232;
+  color: #FFF;
+  font-size: 12px;
+  width: 40px;
+  height: 20px;
+  line-height: 0px;
+  /*border-radius: 50%;*/
+  text-align: left;
+  vertical-align: text-bottom;;
+  overflow: hidden;
+  transition: .4s;
+}
+#timerApp #add_timer #write_button:hover{
+  background: #121212;
+}
+#timerApp .timer_list {
+  line-height: 1.5;
+  list-style: none;
+}
+#timerApp .timer {
+  border: 1px solid #ddd;
+  padding: 6px 3px;
+  margin: 6px 0px;
+  text-align: center;
+}
+#timerApp .title {
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+}
+#timerApp .time {
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+#timerApp .delete_index {
+  font-size: 0px;
+}
+#timerApp .delete {
+}
+#timerApp .delete_button {
+  display: inline-block;
+  text-decoration: none;
+  background: #323232;
+  color: #FFF;
+  font-size: 12px;
+  width: 20px;
+  height: 20px;
+  line-height: 0px;
+  border-radius: 50%;
+  text-align: left;
+  vertical-align: text-bottom;;
+  overflow: hidden;
+  transition: .4s;
+}
+#timerApp .delete_button:hover{
+    background: #121212;
+}
+
+/* modal */
+#contents {
+  z-index: 0;
+  font-size: 16px;
+}
+.page-txt {
+  margin: 30px 0 0;
+  height: 2000px;
+}
+#modal-open {
+  color: #cc0000;
+}
+/* モーダル コンテンツエリア */
+#modal-main {
+　　display: none;
+　　width: 500px;
+　　height: 300px;
+　　margin: 0;
+　　padding: 0;
+　　background-color: #ffffff;
+　　color: #666666;
+　　position:fixed;
+　　z-index: 2;
+}
+/* モーダル 背景エリア */
+#modal-bg {
+　　display:none;
+　　width:100%;
+　　height:100%;
+　　background-color: rgba(0,0,0,0.5);
+　　position:fixed;
+　　top:0;
+　　left:0;
+　　z-index: 1;
+}
